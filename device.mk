@@ -28,7 +28,8 @@ $(warning Overlays defined in '$(DEVICE_PACKAGE_OVERLAYS)' will override '$(PROD
 endif
 DEVICE_PACKAGE_OVERLAYS += \
      device/google/taimen/overlay \
-     device/google/taimen/overlay-lineage
+     device/google/taimen/overlay-lineage \
+     device/google/taimen/overlay-bliss
 
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += device/google/taimen/overlay-lineage/lineage-sdk
 
@@ -79,6 +80,10 @@ PRODUCT_COPY_FILES += \
 # Google Device
 PRODUCT_PACKAGES += \
     SystemUIGoogle
+
+# Doze
+PRODUCT_PACKAGES += \
+    CustomDoze
 
 # Bug 62375603
 PRODUCT_PROPERTY_OVERRIDES += audio.adm.buffering.ms=3
