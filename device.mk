@@ -30,6 +30,8 @@ DEVICE_PACKAGE_OVERLAYS += \
      device/google/taimen/overlay \
      device/google/taimen/overlay-lineage
 
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += device/google/taimen/overlay-lineage/lineage-sdk
+
 # Audio
 PRODUCT_COPY_FILES += \
     device/google/taimen/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
