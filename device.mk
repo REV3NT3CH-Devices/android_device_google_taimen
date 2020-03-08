@@ -29,7 +29,9 @@ PRODUCT_HARDWARE := taimen
 ifdef DEVICE_PACKAGE_OVERLAYS
 $(warning Overlays defined in '$(DEVICE_PACKAGE_OVERLAYS)' will override '$(PRODUCT_HARDWARE)' overlays)
 endif
-DEVICE_PACKAGE_OVERLAYS += device/google/taimen/overlay
+DEVICE_PACKAGE_OVERLAYS += \
+     device/google/taimen/overlay \
+     device/google/taimen/overlay-lineage
 
 # Audio
 PRODUCT_COPY_FILES += \
